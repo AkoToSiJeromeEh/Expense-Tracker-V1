@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Comfortaa:wght@400;500;600;700&family=Montserrat:wght@700&family=Quicksand:wght@300;400;500;600;700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="bg-[#ede9f0] relative min-h-screen">
+      <nav
+        class="w-full bg-white rounded-ss-[3rem] rounded-se-[3rem] fixed bottom-0 p-6 md:top-0 md:bottom-0 md:rounded-none md:w-fit md:p-5"
+      >
+        <ul
+          class="flex flex-row gap-10 justify-evenly md:flex-col md:justify-center h-full"
+        >
+          <li class="">
+            <button class="fa-solid fa-house fa-2x text-violet-400"></button>
+          </li>
+          <li>
+            <button class="fa-solid fa-wallet fa-2x text-violet-400"></button>
+          </li>
+          <li
+            class="relative -top-12 button-bg-add rounded-full text-white w-16 h-16 flex items-center justify-center md:-top-0 md:-right-12"
+          >
+            <button class="fa-solid fa-plus fa-2xl"></button>
+          </li>
+          <li>
+            <button
+              class="fa-solid fa-list-check fa-2x text-violet-400"
+            ></button>
+          </li>
+          <li>
+            <button class="fa-solid fa-user fa-2x text-violet-400"></button>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="p-5 flex flex-col gap-10 lg:w-4/5 m-auto md:w-3/4">
+        <div class="grid grid-cols-1 gap-5 mt-5">
+          <div>
+            <h2 class="text-2xl font-semibold">List of Expenses</h2>
+          </div>
+          <div
+            class="date-cont bg-black p-5 rounded-md min-h-[50vh] overflow-y-scroll"
+          >
+            <h1 class="text-lg mb-5 text-white">October</h1>
+            <div
+              class="grid grid-cols-1 gap-4 overflow-y-scroll h-[50vh] md:grid-cols-2"
+            >
+              <div
+                class="bg-white rounded-2xl w-full p-5 flex flex-row justify-between items-center h-fit"
+              >
+                <div>
+                  <div
+                    class="bg-[#FEB929] rounded-full p-3 w-12 inline-block align-middle"
+                  >
+                    <img
+                      class="w-10"
+                      src="../static/icons/icons8-burger-96.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="inline-block align-middle ms-2">
+                    <p class="font-extrabold">Food</p>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <p class="font-semibold">-$45.00</p>
+                  <span class="text-end font-extrabold text-sm text-secondary"
+                    >Today</span
+                  >
+                </div>
+              </div>
+
+
+			  
+
+              <div
+                class="bg-white rounded-2xl w-full p-5 flex flex-row justify-between items-center h-fit"
+              >
+                <div>
+                  <div
+                    class="bg-[#FEB929] rounded-full p-3 w-12 inline-block align-middle"
+                  >
+                    <img
+                      class="w-10"
+                      src="../static/icons/icons8-burger-96.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="inline-block align-middle ms-2">
+                    <p class="font-extrabold">Food</p>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <p class="font-semibold">-$45.00</p>
+                  <span class="text-end font-extrabold text-sm text-secondary"
+                    >Today</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute flex items-center justify-center left-0 right-0 mt-2 z-0"
+            >
+              <p class="bg-white p-2 rounded-full text-black font-extrabold">
+                Total : $ 18889
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="mb-5">
+            <h1 class="text-2xl font-semibold">List of Reminders</h1>
+          </div>
+          <div
+            class="bg-black rounded-xl p-5 grid grid-flow-dense lg:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1 h-[50vh] overflow-y-scroll"
+          >
+            <div class="bg-white p-5 h-48 rounded-lg">
+              <div class="flex flex-row justify-between">
+                <h1 class="font-semibold">
+                  <i
+                    class="fa-solid fa-lightbulb fa-lg text-orange-400 me-2"
+                  ></i>
+                  Pay School Bills
+                </h1>
+                <p class="text-green-400">$300</p>
+              </div>
+              <div class="mt-5">
+                <p class="leading-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                  temporibus quod! Saepe cumque obcaecati dolores ab aliquam
+                  aliquid veritatis quidem!
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 h-48 rounded-lg">
+              <div class="flex flex-row justify-between">
+                <h1 class="font-semibold">
+                  <i
+                    class="fa-solid fa-lightbulb fa-lg text-orange-400 me-2"
+                  ></i>
+                  Pay School Bills
+                </h1>
+                <p class="text-green-400">$300</p>
+              </div>
+              <div class="mt-5">
+                <p class="leading-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                  temporibus quod! Saepe cumque obcaecati dolores ab aliquam
+                  aliquid veritatis quidem!
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 h-48 rounded-lg">
+              <div class="flex flex-row justify-between">
+                <h1 class="font-semibold">
+                  <i
+                    class="fa-solid fa-lightbulb fa-lg text-orange-400 me-2"
+                  ></i>
+                  Pay School Bills
+                </h1>
+                <p class="text-green-400">$300</p>
+              </div>
+              <div class="mt-5">
+                <p class="leading-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                  temporibus quod! Saepe cumque obcaecati dolores ab aliquam
+                  aliquid veritatis quidem!
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 h-48 rounded-lg">
+              <div class="flex flex-row justify-between">
+                <h1 class="font-semibold">
+                  <i
+                    class="fa-solid fa-lightbulb fa-lg text-orange-400 me-2"
+                  ></i>
+                  Pay School Bills
+                </h1>
+                <p class="text-green-400">$300</p>
+              </div>
+              <div class="mt-5">
+                <p class="leading-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                  temporibus quod! Saepe cumque obcaecati dolores ab aliquam
+                  aliquid veritatis quidem!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

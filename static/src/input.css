@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+
+	margin : 0;
+	padding : 0;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	image-rendering: optimizeLegibility;
+
+}
+body {
+	margin : 0;
+	padding : 0;
+}
+a {
+	color : black;
+	list-style : none;
+}
+h1 , h2, h3, h4, h5, h6 , ul , p , li , img , input , fieldset , legend , figcaption {
+
+	margin : 0;
+	padding : 0;
+}
+strong {
+
+	color : #c6b6fb;
+	font-weight: 900;
+}
+ h1 , h2 , legend {
+
+	font-family : 'Comfortaa';
+}
+ p , li , span {
+
+	font-family : 'Quicksand';
+	font-weight: 500;
+}
+input {
+
+	background-color : rgba(0, 0, 0, 0);
+	outline : none;
+}
+.login-container-main{
+	background-color: rgb(255, 255, 255);
+}
+.landing-card{
+	background: linear-gradient(rgba(226, 152, 246, 0.307), hsl(0, 0%, 0%)), url(../images/bg-card.jpg); 
+	background-repeat: no-repeat; 
+	background-size: cover;
+	 background-position: center;
+	backdrop-filter: blur(10px);
+}
+
+.landing-card h1 {
+	font-weight: 700;
+}
+.landing-content .expense ,  .expense{
+
+	font-family : 'Bungee Outline';
+}
+.landing-content .tracker , .tracker{
+	font-family : 'Montserrat';
+	font-weight: 800;
+}
+button {
+	font-family : 'Quicksand';
+	font-weight: 700;
+}
+.circle1 {
+	background: linear-gradient(to bottom ,  hsl(251, 85%, 82%), hsl(315, 37%, 48%)) , hsl(235, 66%, 54%);
+	box-shadow: 0rem 2rem 5rem hsl(251, 85%, 82%);
+
+}
+.circle2 {
+	background: linear-gradient(to bottom ,  hsl(251, 85%, 82%), hsl(315, 37%, 48%)) , hsl(235, 66%, 54%);
+	box-shadow: 0rem 1rem 5rem hsl(315, 37%, 48%);
+
+}
+.bg-add-ons {
+	background: linear-gradient(rgba(0, 0, 0, 0.046), hsla(0, 0%, 0%, 0.046)), url(../images/bg-login.jpg) ; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.bg-add-ons  h1 {
+	font-family : 'Quicksand';
+	font-weight: 800;
+}
+.button-bg-add{
+	background: linear-gradient(to bottom right ,  #FF9668, #E079C2 , #CE69F5 , #7A88F1 , #23ACE1);
+}
+.c-card{
+	background: linear-gradient(to bottom left ,  #FF9668, #E079C2 , #CE69F5 , #7A88F1 , #23ACE1);
+}
+.add-exp-btn,.active {
+	background: linear-gradient(to top left ,  #FF9668, #E079C2 , #CE69F5 , #7A88F1 , #23ACE1);
+}
+
+@media (max-width: 800px) {
+	.landing-card {
+		background:  rgba(255, 255, 255, 0.197) 0% 0% / 100px 100px repeat  ;
+		background-size: cover;
+		background-blend-mode: multiply;
+		backdrop-filter : blur(10px);
+	}
+	.login-container-main{
+		background: linear-gradient(rgba(0, 0, 0, 0.046), hsla(0, 0%, 0%, 0.046)), url(../images/bg-login.jpg) ; 
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	
+}
+.add-exp-input::placeholder{
+	text-align: center;
+	color: hsl(315, 37%, 48%);
+	font-size: 2rem;
+}
+div::-webkit-scrollbar{
+	display: none;
+}
+section::-webkit-scrollbar{
+	display: none;
+}
+body::-webkit-scrollbar{
+	display: none;
+}
+  
