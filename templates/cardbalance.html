@@ -16,8 +16,118 @@
       referrerpolicy="no-referrer"
     />
     <title>Expense Tracker | Add Expense</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="bg-[#ede9f0] min-h-screen">
+      <main class="p-5 flex flex-col gap-2 md:w-4/5 md:m-auto">
+        <div>
+			<h1 class="text-2xl font-semibold text-start">Card Statistics</h1>
+		</div>
+        <div class="flex flex-col gap-10">
+			<div
+			class="c-card-2 p-10 rounded-3xl text-white flex flex-col gap-5 h-52 lg:w-[100%] lg:h-[40vh] w-full"
+		  >
+			<div class="text-start leading-8 md:leading-10">
+			  <p class="font-extrabold md:text-2xl md:mb-4">Monthly Income Balance</p>
+			  <h1 class="text-2xl font-extrabold md:text-4xl" id="monthly-income">42744.00</h1>
+			</div>
 
-</body>
+			<div class="p-1 bg-stone-950 shadow-md shadow-white rounded-full overflow-hidden">
+				<div class="bg-add-grad p-1 rounded-full " id="progress-bar">
+
+				</div>
+				
+			</div>
+			<div>
+				<p id="warning-balance"></p>
+			</div>
+			<div class="">
+
+				<ul class="flex flex-row gap-6  tracking-[0.8rem] md:text-sm md:justify-around">
+
+					<li>****</li>
+					<li>****</li>
+					<li>402</li>
+				</ul>
+				
+			</div>
+		  </div>
+
+		  <div class="grid lg:grid-cols-2 gap-4 md:grid-cols-1">
+			<div class="flex flex-col gap-10 border-violet-400 border-2  rounded-md p-5">
+				<div>
+					<h1 class="text-2xl font-semibold text-black ">Top Spending</h1>
+				</div>
+				<div
+              class="grid grid-cols-1 gap-4 h-[15vh] lg:w-full md:m-auto md:h-[25vh] w-full overscroll-y-auto place-content-start"
+            >
+              <div
+                class="bg-white rounded-2xl w-full p-5 flex flex-row justify-between items-center"
+              >
+                <div>
+                  <div
+                    class="bg-[#FEB929] rounded-full p-3 w-12 inline-block align-middle"
+                  >
+                    <img
+                      class="w-10"
+                      src="../static/icons/icons8-burger-96.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="inline-block align-middle ms-2">
+                    <p class="font-extrabold">Food</p>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <p class="font-semibold">-$45.00</p>
+                  <span class="text-end font-extrabold text-sm text-secondary"
+                    >Today</span
+                  >
+                </div>
+              </div>
+			  </div>
+		  </div>
+		  <div>
+			
+			<div class="flex flex-col gap-10 border-violet-400 border-2  rounded-md p-5">
+				<div>
+					<h1 class="text-2xl font-semibold text-black ">Newest Spending</h1>
+				</div>
+				<div
+              class="grid grid-cols-1 gap-4 h-[15vh] lg:w-full md:m-auto md:h-[25vh] w-full overscroll-y-auto place-content-start"
+            >
+              <div
+                class="bg-white rounded-2xl w-full p-5 flex flex-row justify-between items-center"
+              >
+                <div>
+                  <div
+                    class="bg-[#FEB929] rounded-full p-3 w-12 inline-block align-middle"
+                  >
+                    <img
+                      class="w-10"
+                      src="../static/icons/icons8-burger-96.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="inline-block align-middle ms-2">
+                    <p class="font-extrabold">Food</p>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <p class="font-semibold">-$45.00</p>
+                  <span class="text-end font-extrabold text-sm text-secondary"
+                    >Today</span
+                  >
+                </div>
+              </div>
+			  </div>
+		  </div>
+
+		  </div>
+		  </div>
+		</div>
+      </main>
+    </div>
+	<script src="../static/js/cardBalance.js"></script>
+  </body>
 </html>

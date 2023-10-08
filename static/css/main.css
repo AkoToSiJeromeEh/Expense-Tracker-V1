@@ -790,6 +790,10 @@ video {
   width: 100%;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .rotate-90 {
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -813,6 +817,10 @@ video {
 
 .place-content-center {
   place-content: center;
+}
+
+.place-content-start {
+  place-content: start;
 }
 
 .place-content-between {
@@ -867,6 +875,10 @@ video {
   gap: 2.5rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -903,6 +915,10 @@ video {
   overflow-y: scroll;
 }
 
+.overscroll-y-auto {
+  overscroll-behavior-y: auto;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -931,6 +947,11 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-s-full {
+  border-start-start-radius: 9999px;
+  border-end-start-radius: 9999px;
+}
+
 .rounded-se-\[3rem\] {
   border-start-end-radius: 3rem;
 }
@@ -957,9 +978,9 @@ video {
   border-color: rgb(156 173 191 / var(--tw-border-opacity));
 }
 
-.border-violet-500 {
+.border-violet-400 {
   --tw-border-opacity: 1;
-  border-color: rgb(139 92 246 / var(--tw-border-opacity));
+  border-color: rgb(167 139 250 / var(--tw-border-opacity));
 }
 
 .bg-\[\#00000041\] {
@@ -1041,9 +1062,19 @@ video {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-stone-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(120 113 108 / var(--tw-bg-opacity));
 }
 
 .bg-violet-400 {
@@ -1061,9 +1092,9 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
-.bg-slate-600 {
+.bg-stone-950 {
   --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+  background-color: rgb(12 10 9 / var(--tw-bg-opacity));
 }
 
 .bg-cover {
@@ -1076,6 +1107,14 @@ video {
 
 .p-0 {
   padding: 0px;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-2 {
@@ -1269,6 +1308,17 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-white {
+  --tw-shadow-color: #fff;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 *{
   margin : 0;
   padding : 0;
@@ -1364,7 +1414,7 @@ button {
   font-weight: 800;
 }
 
-.button-bg-add{
+.button-bg-add , .bg-add-grad{
   background: linear-gradient(to bottom right ,  #FF9668, #E079C2 , #CE69F5 , #7A88F1 , #23ACE1);
 }
 
@@ -1374,6 +1424,15 @@ button {
 
 .add-exp-btn,.active {
   background: linear-gradient(to top left ,  #FF9668, #E079C2 , #CE69F5 , #7A88F1 , #23ACE1);
+}
+
+.c-card-2{
+  background:  url(../images/bg-card.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 @media (max-width: 800px) {
@@ -1528,6 +1587,10 @@ body::-webkit-scrollbar{
     width: fit-content;
   }
 
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1544,12 +1607,20 @@ body::-webkit-scrollbar{
     place-items: center;
   }
 
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
   .md\:justify-center {
     justify-content: center;
   }
 
   .md\:justify-around {
     justify-content: space-around;
+  }
+
+  .md\:justify-evenly {
+    justify-content: space-evenly;
   }
 
   .md\:gap-0 {
@@ -1598,6 +1669,11 @@ body::-webkit-scrollbar{
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .md\:leading-10 {
@@ -1660,6 +1736,10 @@ body::-webkit-scrollbar{
 
   .lg\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:grid-cols-2 {

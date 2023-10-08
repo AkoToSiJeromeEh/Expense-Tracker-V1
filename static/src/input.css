@@ -89,7 +89,7 @@ button {
 	font-family : 'Quicksand';
 	font-weight: 800;
 }
-.button-bg-add{
+.button-bg-add , .bg-add-grad{
 	background: linear-gradient(to bottom right ,  #FF9668, #E079C2 , #CE69F5 , #7A88F1 , #23ACE1);
 }
 .c-card{
@@ -98,7 +98,13 @@ button {
 .add-exp-btn,.active {
 	background: linear-gradient(to top left ,  #FF9668, #E079C2 , #CE69F5 , #7A88F1 , #23ACE1);
 }
-
+.c-card-2{
+	background:  url(../images/bg-card.jpg); 
+	background-repeat: no-repeat; 
+	background-size: cover;
+	 background-position: center;
+	backdrop-filter: blur(10px);
+}
 @media (max-width: 800px) {
 	.landing-card {
 		background:  rgba(255, 255, 255, 0.197) 0% 0% / 100px 100px repeat  ;
