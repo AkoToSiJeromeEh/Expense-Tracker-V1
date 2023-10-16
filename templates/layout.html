@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Comfortaa:wght@400;500;600;700&family=Montserrat:wght@700&family=Quicksand:wght@300;400;500;600;700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Expense Tracker </title>
+  </head>
+  <body>
+    <nav
+    class="w-full bg-white rounded-ss-[3rem] rounded-se-[3rem] fixed bottom-0 p-6 md:top-0 md:bottom-0 md:rounded-none md:w-fit md:p-5 "
+  >
+    <ul
+      class="flex flex-row gap-10 justify-evenly md:flex-col md:justify-center h-full"
+    >
+      <li class="">
+        <button class="fa-solid fa-house fa-2x text-violet-400"></button>
+      </li>
+      <li>
+        <button class="fa-solid fa-wallet fa-2x text-violet-400"></button>
+      </li>
+      <li
+        class="relative -top-12 button-bg-add rounded-full text-white w-16 h-16 flex items-center justify-center md:-top-0 md:-right-12"
+      >
+        <button class="fa-solid fa-plus fa-2xl"></button>
+      </li>
+      <li>
+        <button
+          class="fa-solid fa-list-check fa-2x text-violet-400"
+        ></button>
+      </li>
+      <li>
+        <button class="fa-solid fa-user fa-2x text-violet-400"></button>
+      </li>
+    </ul>
+  </nav>
+
+         <nav
+        class="w-full bg-white rounded-ss-[3rem] rounded-se-[3rem] fixed bottom-0 p-6 md:top-0 md:bottom-0 md:rounded-none md:w-fit md:p-5 z-50"
+      >
+        <ul
+          class="flex flex-row gap-10 justify-evenly md:flex-col md:justify-center h-full"
+        >
+          <li class="">
+           <a href="/home"><button class="fa-solid fa-house fa-2x text-violet-400"></button></a> 
+          </li>
+          <li>
+            <a href="/cardbalance"><button class="fa-solid fa-wallet fa-2x text-violet-400"></button></a>
+          </li>
+          <li
+            class="relative -top-12 button-bg-add rounded-full text-white w-16 h-16 flex items-center justify-center md:-top-0 md:-right-12"
+          >
+            <a href="/addexpense"><button class="fa-solid fa-plus fa-2xl"></button></a>
+          </li>
+          <li>
+            <a href="/listexpense"><button
+              class="fa-solid fa-list-check fa-2x text-violet-400"
+            ></button></a>
+          </li>
+          <li>
+           <a href="/about"><button class="fa-solid fa-user fa-2x text-violet-400"></button></a> 
+          </li>
+        </ul>
+      </nav>
+
+      {% block content %}
+        {% endblock %}
+	
+  </body>
+  </html>

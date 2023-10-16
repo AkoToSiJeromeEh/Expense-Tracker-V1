@@ -1,13 +1,17 @@
-let monthlyIncome = document.getElementById("monthly-income");
+
+let monthlyExpenses = document.getElementById("monthly-expenses");
+let monthlyIncomes = document.getElementById('monthly-incomes');
+
+let totalBalance = document.getElementById('total-bal')
 const progressBar = document.getElementById("progress-bar");
 const warningBalance = document.getElementById("warning-balance");
 
-let expenses =  2000;
-let CurrentMonthlyIncomes = 8000;
+let expenses =  monthlyExpenses.innerHTML;
+let CurrentMonthlyIncomes = monthlyIncomes.innerHTML;
 
 const getCurrentMoney = (expenses, currentMonthlyIncome) => {
 
-	return monthlyIncome.innerHTML = currentMonthlyIncome - expenses;
+	return totalBalance.innerHTML = `$${currentMonthlyIncome - expenses}`
 }
 const warningBalances = (value, element) => {
 	let message, color;

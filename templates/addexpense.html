@@ -1,30 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/main.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Comfortaa:wght@400;500;600;700&family=Montserrat:wght@700&family=Quicksand:wght@300;400;500;600;700&family=Satisfy&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Expense Tracker | Add Expense</title>
-  </head>
-  <body>
+{% extends 'layout.html' %}
+
+{% block content %}
     <div id="hidden-div-expense">
     <main class="bg-[#ede9f0] min-h-screen flex p-5 items-center flex-col gap-10">
-      <div class="self-end">
-        <button>
-          <i class="fa-solid fa-xmark fa-2xl"></i>
-        </button>
-      </div>
       <div class="flex flex-row gap-8">
         <button class="active text-white p-5 rounded-full text-2xl w-56 button-tab  bg-slate-600 " data-tab="content-1">Expense</button>
         <button class="p-3 rounded-full text-2xl w-56 button-tab bg-slate-600" data-tab="content-2">Reminder</button>
@@ -33,20 +11,22 @@
         <div id="content-1" class="w-full tab-content" >
           <div class="self-start w-[70%] mx-auto ">
             <form
-              action=""
+              action="/insertexpenses"
+              method="post"
               class="flex flex-col gap-8 items-start justify-start w-full"
             >
         <div class="text-center w-full" >
           <p class="text-4xl mb-5">
             Add Expenses
           </p>
-          <input class="bg-white p-6 rounded-full w-64 add-exp-input" clas type="text" placeholder="0">
+          <input class="bg-white p-6 rounded-full w-64 add-exp-input"  type="text" placeholder="0" name="expenseamount">
         </div>
+              <input type="number" name="expenseid" hidden>
               <fieldset
                 class="border-2 text-start border-[#c6b6fb] w-full ps-2 pb-1 rounded-md relative"
               >
                 <legend class="text-lg tracking-wide">Category</legend>
-                <input class="p-3 w-full" type="text" />
+                <input class="p-3 w-full" type="text" name="category" />
                 <div
                   class="absolute right-0 p-5 bg-[#c6b6fb] -top-3 rounded-sm h-16"
                 >
@@ -58,7 +38,7 @@
                 class="border-2 border-[#c6b6fb] w-full ps-2 pb-1 rounded-md text-start relative"
               >
                 <legend class="text-lg tracking-wide">Today</legend>
-                <input class="p-3 w-full" type="text" />
+                <input class="p-3 w-full" type="date"  name="date"/>
                 <div
                   class="absolute right-0 p-5 bg-[#c6b6fb] -top-3 rounded-sm h-16"
                 >
@@ -66,7 +46,8 @@
                   <i class="fa-solid fa-clock fa-lg text-[#ffffff]"></i>
                 </div>
               </fieldset>
-          <button class=" p-4 w-full add-exp-btn text-white text-lg rounded-md">
+            <p class="text-green-500 font-bold w-full text-center" id="sucessInsert">{{sucessInsert}}</p>
+          <button type="submit" class=" p-4 w-full add-exp-btn text-white text-lg rounded-md">
           Save
           </button>
             </form>
@@ -75,20 +56,22 @@
         <div id="content-2" class="w-full tab-content hidden">
           <div class="self-start w-[70%] mx-auto">
             <form
-              action=""
+              action="/addreminder"
+              method="post"
               class="flex flex-col gap-8 items-start justify-start w-full"
             >
+            <input type="number" name="reminderid" hidden>
         <div class="text-center w-full" >
           <p class="text-4xl mb-5">
             Add Reminder
           </p>
-          <input class="bg-white p-6 rounded-md w-64 add-exp-input" type="text" placeholder="Title">
+          <input class="bg-white p-6 rounded-md w-64 add-exp-input" type="text" placeholder="Title" name="title">
         </div>
               <fieldset
                 class="border-2 text-start border-[#c6b6fb] w-full ps-2 pb-1 rounded-md relative"
               >
                 <legend class="text-lg tracking-wide">Content</legend>
-                <input class="p-3 w-full" type="text" />
+                <input class="p-3 w-full" type="text" name="content" />
                 <div
                   class="absolute right-0 p-5 bg-[#c6b6fb] -top-3 rounded-sm h-16"
                 >
@@ -100,7 +83,7 @@
                 class="border-2 text-start border-[#c6b6fb] w-full ps-2 pb-1 rounded-md relative"
               >
                 <legend class="text-lg tracking-wide">Price</legend>
-                <input class="p-3 w-full" type="text" />
+                <input class="p-3 w-full" type="text" name="price" />
                 <div
                   class="absolute right-0 p-5 bg-[#c6b6fb] -top-3 rounded-sm h-16"
                 >
@@ -112,7 +95,7 @@
                 class="border-2 border-[#c6b6fb] w-full ps-2 pb-1 rounded-md text-start relative"
               >
                 <legend class="text-lg tracking-wide">Date</legend>
-                <input class="p-3 w-full" type="text" />
+                <input class="p-3 w-full" type="date" name="date" />
                 <div
                   class="absolute right-0 p-5 bg-[#c6b6fb] -top-3 rounded-sm h-16"
                 >
@@ -120,6 +103,7 @@
                   <i class="fa-solid fa-clock fa-lg text-[#ffffff]"></i>
                 </div>
               </fieldset>
+              <p class="text-green-500 font-semibold" id="sucess-remind">{{successremind}}</p>
           <button class=" p-4 w-full add-exp-btn text-white text-lg rounded-md">
           Save
           </button>
@@ -129,9 +113,7 @@
     </main>
   </div>
     <script src="../static/js/addExpense.js"></script>
-  </body>
-</html>
-
+{% endblock %}
 
 
 

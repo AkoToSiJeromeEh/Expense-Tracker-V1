@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div id="hidden-div-expense">
+    <main class="bg-[#ede9f0] min-h-screen flex p-5 items-center flex-col gap-10">
+
+        <div id="content-2" class="w-full tab-content ">
+          <div class="self-start w-[70%] mx-auto">
+            <form
+              action="/update_reminder"
+              method="post"
+              class="flex flex-col gap-8 items-start justify-start w-full"
+            >
+            <input type="number" name="reminderid" value="{{reminder[0]}}" hidden>
+        <div class="text-center w-full" >
+          <p class="text-4xl mb-5">
+            Update Reminder
+          </p>
+          <input class="bg-white p-6 rounded-md w-64 add-exp-input" type="text" placeholder="Title" name="title">
+        </div>
+              <fieldset
+                class="border-2 text-start border-[#c6b6fb] w-full ps-2 pb-1 rounded-md relative"
+              >
+                <legend class="text-lg tracking-wide">Content</legend>
+                <input class="p-3 w-full" type="text" name="content" />
+                <div
+                  class="absolute right-0 p-5 bg-[#c6b6fb] -top-3 rounded-sm h-16"
+                >
+                  <i class="fa-solid fa-font fa-lg text-[#ffffff]"></i>
+          
+                </div>
+              </fieldset>
+              <fieldset
+                class="border-2 text-start border-[#c6b6fb] w-full ps-2 pb-1 rounded-md relative"
+              >
+                <legend class="text-lg tracking-wide">Price</legend>
+                <input class="p-3 w-full" type="text" name="price" />
+                <div
+                  class="absolute right-0 p-5 bg-[#c6b6fb] -top-3 rounded-sm h-16"
+                >
+                  <i class="fa-solid fa-font fa-lg text-[#ffffff]"></i>
+          
+                </div>
+              </fieldset>
+              <fieldset
+                class="border-2 border-[#c6b6fb] w-full ps-2 pb-1 rounded-md text-start relative"
+              >
+                <legend class="text-lg tracking-wide">Date</legend>
+                <input class="p-3 w-full" type="date" name="date" />
+                <div
+                  class="absolute right-0 p-5 bg-[#c6b6fb] -top-3 rounded-sm h-16"
+                >
+          
+                  <i class="fa-solid fa-clock fa-lg text-[#ffffff]"></i>
+                </div>
+              </fieldset>
+              <p class="text-green-500 font-semibold" id="sucess-remind">{{sucessremind}}</p>
+          <button class=" p-4 w-full add-exp-btn text-white text-lg rounded-md">
+          Save
+          </button>
+            </form>
+          </div> 
+        </div>
+    </main>
+  </div>
+    <script src="../static/js/addExpense.js"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

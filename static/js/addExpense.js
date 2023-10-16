@@ -1,5 +1,7 @@
 const allTabContents = document.getElementsByClassName("tab-content");
 const buttonTabs = document.querySelectorAll(".button-tab");
+const sucessInsert = document.getElementById('sucessInsert');
+const sucessRemind = document.getElementById('sucess-remind');
 
 buttonTabs.forEach(function (tabButton, index) {
   tabButton.addEventListener("click", function () {
@@ -15,3 +17,13 @@ buttonTabs.forEach(function (tabButton, index) {
   });
 });
 buttonTabs[0].click();
+
+const resetSucess = () => {
+  
+    setInterval(() => {
+
+        sucessInsert.innerHTML = ' ';
+        sucessRemind.innerHTML = ' ';
+    } , 5000)
+}
+resetSucess()

@@ -16,7 +16,7 @@ body {
 	padding : 0;
 }
 a {
-	color : black;
+	color : rgb(255, 255, 255);
 	list-style : none;
 }
 h1 , h2, h3, h4, h5, h6 , ul , p , li , img , input , fieldset , legend , figcaption {
@@ -33,7 +33,7 @@ strong {
 
 	font-family : 'Comfortaa';
 }
- p , li , span {
+ p , li , span , a {
 
 	font-family : 'Quicksand';
 	font-weight: 500;
@@ -89,7 +89,7 @@ button {
 	font-family : 'Quicksand';
 	font-weight: 800;
 }
-.button-bg-add , .bg-add-grad{
+.button-bg-add , .bg-add-grad , .rgb-add{
 	background: linear-gradient(to bottom right ,  #FF9668, #E079C2 , #CE69F5 , #7A88F1 , #23ACE1);
 }
 .c-card{
